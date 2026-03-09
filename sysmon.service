@@ -1,0 +1,13 @@
+[Unit]
+Description=sysmon - lightweight system monitor
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/claw/workdir/sysmon/sysmon /home/claw/workdir/sysmon
+Restart=always
+RestartSec=5
+User=claw
+
+[Install]
+WantedBy=multi-user.target
